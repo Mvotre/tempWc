@@ -1,0 +1,12 @@
+Projeto Web Components
+  - Estrutura básica
+    - Roteamento básico
+      - click no botão precisa carregar um wc no meio
+      - dois botões, dois componentes
+     
+cores
+e76f51 - laranja
+f4a261 - laranja claro
+e9c46a - bege
+2a9d8f - verde
+264653 - azul

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <vn-title> Rede TESTE </vn-title>
+  <vn-tabs loaded-component="search-container"></vn-tabs>
+  <vn-button primary-inverted> TESTE </vn-button>
+  <vn-button primary> OK </vn-button>
+  <ra-table data=""> </ra-table>
+</body>
+<script defer src="/components/Tabs.js"></script>
+<script defer src="/components/Title.js"></script>
+<script defer src="/components/Table.js"></script>
+<script defer src="/components/Button.js"></script>
+<script defer src="/components/Search.js"></script>
+<script defer src="/components/Classification.js"></script>
+<script defer src="/components/NewCalc.js"></script>
+
+<script>
+  document.addEventListener("ButtonClick", (evt) => console.log(evt));
+
+  const colaboradores = [
+      {
+          "id": "2",
+          "nome": "Antonio Henrique Carelli Netto",
+          "login": "antonio.carelli@redeancora.com.br",
+          "statusDescricao": "ATIVO",
+          "status": "true"
+      },
+      {
+          "id": "3",
+          "nome": "Guilherme Viana",
+          "login": "guilherme.viana@redeancora.com.br",
+          "statusDescricao": "INATIVO",
+          "status": "true"
+      },
+      {
+          "id": "4",
+          "nome": "Jonatas de Moraes Junior",
+          "login": "jonatas.moraes@redeancora.com.br",
+          "statusDescricao": "ATIVO",
+          "status": "true"
+      },
+      {
+          "id": "5",
+          "nome": "Rafael Busuth",
+          "login": "rafael.busuth@redeancora.com.br",
+          "statusDescricao": "ATIVO",
+          "status": "true"
+      },
+      {
+          "id": "6",
+          "nome": "Denis Colli Spalenza",
+          "login": "denis.spalenza@redeancora.com.br",
+          "statusDescricao": "INATIVO",
+          "status": "true"
+      },
+      {
+          "id": "7",
+          "nome": "Rubia Gomes",
+          "login": "rubia.gomes@redeancora.com.br",
+          "statusDescricao": "ATIVO",
+          "status": "true"
+      },
+      {
+          "id": "8",
+          "nome": "Luis Marin",
+          "login": "luis.marin@redeancora.com.br",
+          "statusDescricao": "ATIVO",
+          "status": "true"
+      },
+      {
+          "id": "9",
+          "nome": "Antonio Neto",
+          "login": "antonio.neto@redeancora.com.br",
+          "statusDescricao": "INATIVO",
+          "status": "true"
+      },
+      {
+          "id": "10",
+          "nome": "Rodrigo Nobrega da Silva",
+          "login": "rodrigo.nobrega@redeancora.com.br",
+          "statusDescricao": "ATIVO",
+          "status": "true"
+      },
+      {
+          "id": "11",
+          "nome": "Leonardo Gutierrez",
+          "login": "leonardo.gutierrez@redeancora.com.br",
+          "statusDescricao": "ATIVO",
+          "status": "true"
+      },
+  ]
+
+  const x = document.querySelector("ra-table");
+
+  setTimeout(() => {
+    x.setAttribute('data', JSON.stringify(colaboradores));
+    changeAgain()
+  }, 2000)
+
+
+  const changeAgain = () => {
+    setTimeout(() => {
+      colaboradores[0].status = "false";
+      x.setAttribute('data', JSON.stringify(colaboradores))
+    }, 2000)
+  }
+</script>
+</html>
